@@ -1,0 +1,65 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 16 22:07:31 2017
+| Host         : EALAB01 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file MyMain_control_sets_placed.rpt
+| Design       : MyMain
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    12 |
+| Minimum Number of register sites lost to control set restrictions |    45 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              54 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              29 |            8 |
+| Yes          | No                    | No                     |              22 |            7 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              50 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------------+-----------------------------+------------------+----------------+
+|   Clock Signal   |           Enable Signal          |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++------------------+----------------------------------+-----------------------------+------------------+----------------+
+|  clock_IBUF_BUFG | sw/rotation_duration_saved       |                             |                2 |              2 |
+|  clock_IBUF_BUFG | lfsr/p_0_in                      |                             |                2 |              2 |
+|  clock_IBUF_BUFG | register/E[0]                    | register/SR[0]              |                2 |              4 |
+|  clock_IBUF_BUFG | keypad/key_valid                 | reset_IBUF                  |                1 |              4 |
+|  clock_IBUF_BUFG | keypad/FSM_onehot_row[4]_i_1_n_0 |                             |                1 |              4 |
+|  clock_IBUF_BUFG | keypad/count_deb                 | keypad/count_deb[5]_i_1_n_0 |                2 |              6 |
+|  clock_IBUF_BUFG | dd/E[0]                          |                             |                1 |              6 |
+|  clock_IBUF_BUFG | keypad/clk_en2                   |                             |                2 |              9 |
+|  clock_IBUF_BUFG | lfsr/p_0_in                      | reset_IBUF                  |                5 |             16 |
+|  clock_IBUF_BUFG | sw/stepmotor_inst0/sel           | sw/stepmotor_inst0/clear    |                5 |             20 |
+|  clock_IBUF_BUFG |                                  | sw/count[28]_i_1_n_0        |                8 |             29 |
+|  clock_IBUF_BUFG |                                  |                             |               20 |             54 |
++------------------+----------------------------------+-----------------------------+------------------+----------------+
+
+
